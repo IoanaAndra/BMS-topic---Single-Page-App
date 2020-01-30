@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<head>
+<title>Learning AngularJS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en-US">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+
+<body style="background-color:grey;">
+<div ng-app="myApp" ng-controller="myCtrl">
+
+First Name: <input type="text" ng-model="string1"><br>
+Last Name: <input type="text" ng-model="string2"><br>
+<br>
+Full Name: {{string1 + " " + string2}}
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.string1= "John";
+    $scope.string2= "Doe";
+});
+</script>
+
+</body>
+</html>
